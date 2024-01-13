@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
 	"os"
@@ -44,17 +43,26 @@ func main() {
 	sort.Slice(existingRoles, func(i int, j int) bool {
 		return existingRoles[i].Position > existingRoles[j].Position
 	})
-
-	json.NewEncoder(os.Stdout).Encode(existingRoles)
 	colorscheme, ok := schemes[*color]
 	if !ok {
 		panic(fmt.Sprintf("colorscheme %s not found", *color))
 	}
-	
+	for i, role := range existingRoles {
+		var colorToPick int
+		if i < len(colorscheme.Restricted) {
+			colorToPick = colorscheme.Restricted[i]
+		} else {
+			colorToPick = colorscheme.Unrestricted[(i-len(colorscheme.Restricted))%len(colorscheme.Unrestricted)]
+		}
+		dg.GuildRoleEdit(*guildID, role.ID, &discordgo.RoleParams{
+			Color: &colorToPick,
+		})
+	}
+
 }
 
 func printAllColors() {
-	for name, _ := range(schemes){
+	for name := range schemes {
 		fmt.Println(name)
 	}
 }
