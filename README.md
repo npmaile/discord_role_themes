@@ -1,2 +1,2 @@
 # discord_role_themes
-Role themes for Discord
+Very simple script to set a list of colors for discord roles. 

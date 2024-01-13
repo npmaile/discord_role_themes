@@ -34,5 +34,18 @@ func init() {
 				0xad8ee6,
 				0x444B6A},
 		},
+		"Pastel": {
+			Restricted: []int{
+
+			},
+			Unrestricted: []int{
+				0xd6e6ff,
+				0xd7f9f8,
+				0xffffea,
+				0xfff0d4,
+				0xfbe0e0,
+				0xe5d4ef,
+			},
+		},
 	}
 }
