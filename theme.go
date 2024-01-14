@@ -35,9 +35,7 @@ func init() {
 				0x444B6A},
 		},
 		"Pastel": {
-			Restricted: []int{
-
-			},
+			Restricted: []int{},
 			Unrestricted: []int{
 				0xd6e6ff,
 				0xd7f9f8,
@@ -45,6 +43,49 @@ func init() {
 				0xfff0d4,
 				0xfbe0e0,
 				0xe5d4ef,
+			},
+		},
+		"rose-pine": {
+			Restricted: []int{},
+			Unrestricted: []int{
+				0x16141f,
+				0x191724,
+				0x1f1d2e,
+				0x26233a,
+				0x6e6a86,
+				0x908caa,
+				0xe0def4,
+				0xeb6f92,
+				0xf6c177,
+				0xebbcba,
+				0x31748f,
+				0x9ccfd8,
+				0xc4a7e7,
+				0x21202e,
+				0x403d52,
+				0x524f67,
+			},
+		},
+		"rose-pine-dawn": {
+			Restricted: []int{},
+			Unrestricted: []int{
+
+				0x575279,
+				0xb4637a,
+				0xea9d34,
+				0xd7827e,
+				0x286983,
+				0x56949f,
+				0x907aa9,
+				0xf4ede8,
+				0xdfdad9,
+				0xf8f0e7,
+				0xfaf4ed,
+				0xfffaf3,
+				0xf2e9e1,
+				0x9893a5,
+				0x797593,
+				0xcecacd,
 			},
 		},
 	}
